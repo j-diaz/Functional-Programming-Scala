@@ -120,13 +120,35 @@ object chapter3 {
     def lengthFoldLeft(l: List[Int]): Int =
       foldLeft(l, 0)((y, _) => y + 1)
 
+//    def concat[A](ls: List[List[A]]): List[A] =
+//      ls match {
+//        case Nil => Nil:List[A]
+//        case Cons(x, xs) => Cons(concat(x), concat(xs))
+//      }
+
     def reverse[A](ls: List[A]): List[A] =
       foldLeft(ls, Nil: List[A])((acc, h) => Cons(h, acc))
+
+    def addOne[A](ls: List[Int]): List[Int] =
+      foldRight(ls, Nil:List[Int])((h,t) => Cons(h + 1, t))
+
+    def convert(ls: List[Double]): List[String] =
+      foldRight(ls, Nil:List[String])((h,t) => Cons(h.toString, t))
+
+    def map[A,B](as: List[A])(f: A => B): List[B] =
+      foldRight(as, Nil:List[B])((h,t) => Cons(f(h), t))
+
+    def filter[A](as: List[A])(f: A => Boolean): List[A] =
+      foldRight(as, Nil:List[A])((h,t) => if(f(h)) Cons(h,t)
+                                          else filter(t)(f))
+
 //
 //    def appendFoldLeft[A](a1: List[A], a2: List[A]): List[A] =
 //      foldLeft(a1, Nil)((tail, h) => Cons())
-
 	}
+  val y = List(1,2,3,4)
+
+
 	
 	val x = List(1,2,3,4,5) match {
 		case Cons(x, Cons(2, Cons(4,_))) => x
@@ -147,13 +169,54 @@ object chapter3 {
   List.append(test, test2)
   val test3 = List(1,2,3)
   List.foldRight(test3, 0)((x, y) => x + y)
-
   List.length(test3)
-
   List.foldLeft(test3, 0)((x, y) => x + y)
   List.productFoldLeft(test3)
   List.sumFoldLeft(test3)
   List.lengthFoldLeft(test3)
   List.reverse(test3)
+  List.addOne(test3)
+  List.filter(test3)( (x: Int) => x <= 2)
+
+  sealed trait Tree[+A]
+  case class Leaf[A](value: A) extends Tree[A]
+  case class Branch[A](left: Tree[A], right: Tree[A]) extends Tree[A]
+  object Tree{
+
+    def size[A](node: Tree[A]): Int =
+      node match {
+        case Leaf(v: A) => 1
+        case Branch(l: Tree[A],r: Tree[A]) => 1 + size(l) + size(r)
+      }
+
+    def maximum(node: Tree[Int]): Int =
+      node match {
+        case Leaf(v: Int) => v
+        case Branch(l: Tree[Int], r:Tree[Int]) => {
+          val left = maximum(l)
+          val right = maximum(r)
+          if(left < right) right
+          else             left
+        }
+      }
+
+    def depth[A](node: Tree[A]): Int =
+      node match {
+        case Leaf(v: A) => 0
+        case Branch(l: Tree[A], r: Tree[A]) => {
+          if(size(node) > 1) depth(l).max(depth(r))
+          else 1
+        }
+      }
+  }
+
+  val lee = Leaf[Int](1)
+
+  val luu = Leaf[Int](2)
+  val tee = Branch[Int](lee,luu)
+  Tree.size(tee)
+  Tree.maximum(tee)
+  Tree.depth(tee)
+
 
 }
