@@ -106,29 +106,3 @@ of contention. In message passing, this is how we guarantee that the message we 
 same message our recipient receives. By making the message immutable, we assure its
 accuracy and eliminate the possibility of contention
 
-##Actor Model
-
-###What is?
-Actors are small capsules of programming logic that
-contain behavior and state, and communicate via message passing
-
-The primary purpose behind an actor is to provide two concepts:
-* A safe, efficient way to reason about computations in a concurrent environment, and
-* A common means to communicate in a local, parallel, and distributed environment.
-
-Components:
-* State
-* Actor reference
-* Asynchronous message passing
-* Mailbox
-* Behavior and the Receive loop
-* Supervision
-
-###State
-Akka isolates each actor on a light-weight thread that protects it from the rest
-of the system.
-The actors themselves (housed inside a light-weight thread) run on a real set of
-threads, where a single thread may house many actors with subsequent invocations for a
-given actor occurring on a different thread
-
-pag 46
