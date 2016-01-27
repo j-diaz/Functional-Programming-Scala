@@ -50,7 +50,7 @@ Using asynchronous message passing semantics, actors interact with one another b
 
 *Exactly-once*: For each message handled, the recipient will recieve 1-and-only-1 copy. (Inference: The message will not be lost or duplicated)
 
-![](/scala-playground/reactive-application-development/message-delivery-method-comp.png)
+![](message-delivery-method-comp.png)
 
 
 
