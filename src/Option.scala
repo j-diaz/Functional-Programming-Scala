@@ -5,7 +5,9 @@
 import scala.{Option => _, Either => _, _}
 
 case class Some2[+A](get: A) extends Option[A]
+
 case object None2 extends Option[Nothing]
+
 sealed trait Option[+A] {
 
   def map[B](f: A => B): Option[B] = this match {
@@ -24,11 +26,4 @@ sealed trait Option[+A] {
       case None2 => ob
       case Some2(a) => Some2(a)
     }
-}
-
-object test{
-  val x = Some2(2)
-
-
-
 }

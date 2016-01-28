@@ -7,6 +7,7 @@ object chapter3 {
 	case object Nil extends List[Nothing]
 	case class Cons[+A](head: A, tail: List[A]) extends List[A]
 	object List{
+
 		def sum(ints: List[Int]): Int = ints match {
 			case Nil => 0
 			case Cons(x,xs) => x + sum(xs)
@@ -142,6 +143,8 @@ object chapter3 {
       foldRight(as, Nil:List[A])((h,t) => if(f(h)) Cons(h,t)
                                           else filter(t)(f))
 
+    //def filterMap[A,B](as: List[A])(f: A => List[B]): List[A] =
+
 //
 //    def appendFoldLeft[A](a1: List[A], a2: List[A]): List[A] =
 //      foldLeft(a1, Nil)((tail, h) => Cons())
@@ -177,12 +180,10 @@ object chapter3 {
   List.reverse(test3)
   List.addOne(test3)
   List.filter(test3)( (x: Int) => x <= 2)
-
   sealed trait Tree[+A]
   case class Leaf[A](value: A) extends Tree[A]
   case class Branch[A](left: Tree[A], right: Tree[A]) extends Tree[A]
   object Tree{
-
     def size[A](node: Tree[A]): Int =
       node match {
         case Leaf(v: A) => 1
@@ -217,6 +218,4 @@ object chapter3 {
   Tree.size(tee)
   Tree.maximum(tee)
   Tree.depth(tee)
-
-
 }
