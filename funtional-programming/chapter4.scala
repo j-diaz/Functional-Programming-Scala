@@ -1,4 +1,4 @@
-import scala.{Option => _, Either => _._)
+//import scala.{Option => _, Either => _._)
 
 sealed trait Option[+A] {
 
@@ -17,13 +17,20 @@ sealed trait Option[+A] {
     case Some(a) => a
   }
  
-  def orElse[B >: A] (obs: => Option[B]): Option[B] = sys.error("todo")
+  def orElse[B >: A] (obs: => Option[B]): Option[B] = this match {
+    case None => obs 
+    case _ => this
+  }
  
-  def filter(f: A => Boolean): Option[A] = sys.error("todo")
+  def filter(f: A => Boolean): Option[A] = this match {
+    case Some(a) if f(a) => this 
+    case _ => None
+  }
 
 }
 
-case class Some[+A](get: A) extends Option[A]
+case class Some[+A] (get: A) extends Option[A]
+
 case object None extends Option[Nothing]
 
 
