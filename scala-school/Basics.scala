@@ -1,8 +1,11 @@
+/*
+* Class
+*/
 class Calculator(){
 
-	val brand: String = "HP"
-	def add(m: Int, n: Int): Int = m + n
-  
+  val brand: String = "HP"
+  def add(m: Int, n: Int): Int = m + n
+
 }
 
 class Calculator(brand: String) {
@@ -17,3 +20,9 @@ class Calculator(brand: String) {
    // An instance method
    def add(m: Int, n: Int): Int = m + n
 }
+
+/*
+* Expressions
+*/
+
+
