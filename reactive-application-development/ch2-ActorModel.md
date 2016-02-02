@@ -53,19 +53,18 @@ Using asynchronous message passing semantics, actors interact with one another b
 ![](message-delivery-method-comp.png)
 
 ###The Mailbox
- * Each actor has exactly one mailbox that enqueues all messages in the order received. 
- * For a given sender, the recipient will
-always receive the messages sent in the proper order.
- * If a single recipient receives messages from multiple senders, due to the randomness of threading, the messages in aggregate may be interleaved. 
+* Each actor has exactly one mailbox that enqueues all messages in the order received. 
+* For a given sender, the recipient will always receive the messages sent in the proper order.
+* If a single recipient receives messages from multiple senders, due to the randomness of threading, the messages in aggregate may be interleaved. 
 
- **the recipient will always receive messages in order from a given sender**
- **When there are multiple senders, as the figure shows, that interleaving can occur. **
+**the recipient will always receive messages in order from a given sender**
+**When there are multiple senders, as the figure shows, that interleaving can occur. **
  
- ###Behavior and The Recieve Loop
- Each time an actor receives a message, it’s processed against its behavior in a method known as the receive loop.
+###Behavior and The Recieve Loop
+Each time an actor receives a message, it’s processed against its behavior in a method known as the receive loop.
 
- ###Supervision
- Akka allows any actor to create child actors for the purposes of delegating sub-tasks. In this context, the spawning actor becomes known as a supervisor and has authority over the
+###Supervision
+Akka allows any actor to create child actors for the purposes of delegating sub-tasks. In this context, the spawning actor becomes known as a supervisor and has authority over the
 children.
 
 **fault tolerance** is defined as an aspect of the system that allows continued operation in the event of failure of some of its components. 
@@ -93,7 +92,96 @@ guardian where all messages sent to stopped or non-existent actors go.
 
 */temp:* The Temp Guardian - short lived stuff goes here
 
-*/remote* Teh Remote Guardian - for the supervisors reside on a remote systems
+*/remote* The Remote Guardian - for the supervisors reside on a remote systems
 
-pag 55
- page 56
+##Supervision
+
+OneForOneStrategy: Self explanatory.
+AllForOneStrategy: Default strategy. The supervisor will execute one of the 4 directive not only against the subordinate that faulted, but also against
+all subordinates the supervisor manages.
+
+1. Resume
+2. Restart
+3. Stop
+4. Escalate
+
+###Actor Path
+Accessing an actor system:
+```
+akka://bookstore/user/order/worker-1				 // local
+akka.tcp://bookstore@host.bookstore.com:5154/user/order/worker-2 // remote
+```
+Lookup an actor
+* relative       - ActorSystem.actorSelection
+* absolute paths - ActorContext.actorSelection
+
+actorSelection - sending a message to an actor directly
+```
+context.actorSelection("../worker-1) ! msg	     // relative
+context.actorSelection("/user/order/worker-1") ! msg // absolute
+```
+
+To create an actor, you use **ActorSystem.actorOf** or **ActorContext.actorOf**
+
+**ActorSystem.actorOf** - used when starting thr system
+**ActorContext.actorOf** - used when already created actors
+
+Not needs Props **actorSelection** 
+Needs **actorOf** Props
+**Props** - immutable class for specifying options for actor creation
+```
+class Manager extends Actor {
+ context.actorOf(Prop[Worker], "worker-1")
+}
+```
+Best practice: Use a Props factory
+```
+object Worker {
+  def props = Props[Worker]
+}
+
+class Worker extends Actor {
+  def receive = {
+    case order:Order => // do something ...
+    // other code ...
+  }
+}
+
+class Manager extends Actor {
+  context.actorOf(Worker.props, “worker-1”)
+  // other code ...
+}
+```
+###Actor Lifecycle
+
+####Starting
+Occurs if & only if acotr is started or whn restarted by supervisor
+* **actorOf** is called
+* the actor path is reserved
+* a UID is assigned to the actor instance
+* the instance is created
+* preStart() method is called on the actor instance
+
+####Stopping
+* **Stop**, **context.stop()** or **PosionPill**
+* **postStop()** is called on the actor
+* the actor is terminated
+* the acot path is now usable
+
+####Restarting
+When a supervisor restarts an actor
+* **postRestart()** is called o nthe actor
+* old actor instance is asked to stop with **Stop** 
+* **postStop()** old actor instance
+* the actor path of the old instance is reserved for the new instance
+* the UID of the old instance is reserved for the new instance
+* the old actor instance is terminated
+* **preStart()** is called on the new instance
+* new actor instance is started
+
+###Microkernel Container
+The runtime in Akka, the microkernel, is designed and optimized to offer a bundling mechanism
+that allows single payload distribution atop the JVM without the need for an application
+container or startup script
+
+page cahpter3

@@ -1,36 +1,45 @@
-//import scala.{Option => _, Either => _._)
 
-sealed trait Option[+A] {
+sealed trait Option2[+A] {
 
-  def map[B] (f: A => B): Option[B] = this match {
-    case None => None
-    case Some(a) => Some(f(a)) 	
+  def map[B] (f: A => B): Option2[B] = this match {
+    case None2 => None2
+    case Some2(a) => Some2(f(a)) 	
   } 
 
-  def flatMap[B] (f: A => Option[B]): Option[B] = this match {
-    case None => None
-    case Some(a) => f(a)
+  def flatMap[B] (f: A => Option2[B]): Option2[B] = this match {
+    case None2 => None2
+    case Some2(a) => f(a)
   } 
  
   def getOrElse[B >: A] (default: => B): B = this match {
-    case None => default
-    case Some(a) => a
+    case None2 => default
+    case Some2(a) => a
   }
  
-  def orElse[B >: A] (obs: => Option[B]): Option[B] = this match {
-    case None => obs 
+  def orElse[B >: A] (obs: => Option2[B]): Option2[B] = this match {
+    case None2 => obs 
     case _ => this
   }
  
-  def filter(f: A => Boolean): Option[A] = this match {
-    case Some(a) if f(a) => this 
-    case _ => None
+  def filter(f: A => Boolean): Option2[A] = this match {
+    case Some2(a) if f(a) => this 
+    case _ => None2
   }
 
 }
 
-case class Some[+A] (get: A) extends Option[A]
+case class Some2[+A] (get: A) extends Option2[A]
 
-case object None extends Option[Nothing]
+case object None2 extends Option2[Nothing]
 
+object Option2 {
+  def mean(xs: Seq[Double]): Option2[Double] = {
+    if(xs.isEmpty) None2
+    else Some(xs.sum / xs.length)
+  } 
 
+  def variance(xs: Seq[Double]): Option2[Double] = {
+  
+  }
+
+}
