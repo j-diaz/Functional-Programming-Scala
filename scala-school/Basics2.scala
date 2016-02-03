@@ -41,3 +41,37 @@ class Bar(foo: String)
 object Bar {
   def apply(foo: String) = new Bar(foo)
 }
+
+/**
+* Functions are Objects
+*/
+
+object addOne extends Function1[Int, Int] {
+	def apply(m: Int): Int = m + 1
+}
+
+addOne(1)
+
+// The syntactic sugar of apply helps unify the duality of object and functional programming. You can pass classes around and use them as 
+// functions and functions are just instances of classes under the covers.
+
+// Classes can also exendd Function and those instances can be called with ()
+class AddOne extends Function[Int, Int]  {
+	def apply(m: Int): Int = m + 1
+} 
+
+val plusOne = new AddOne()
+// call it with argument
+plusOne(1)
+
+/**
+* Short hand for extends Function[Int, Int] is extends (Int => Int)
+*/
+class AddOne extends (Int => Int){
+	def apply(m: Int): Int = m + 1
+}
+
+// Packages
+
+// Values and functions cannot be outside of a class or object. 
+// Objects are usefull for organizing static functions
