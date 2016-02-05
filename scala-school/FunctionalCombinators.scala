@@ -49,3 +49,48 @@ numbers2.dropWhile(_ % 2 != 0)
 numbers2.foldLeft(0)((m: Int, n: Int) => m + n)
 
 numbers2.foldLeft(0) {(m: Int, n: Int) => println("m: " + m + " n: " + n); m + n }
+
+// foldright exists
+
+// flatten
+List( List(1, 2), List(3, 4)).flatten
+
+// flatMap - should be called mapFlat
+// runsthe .map().flatten
+val nestedNumbers = List(List(1, 2), List(3, 4))
+
+nestedNumbers.flatMap(x => x.map(_ * 2))
+// res0: List[Int] = List(2, 4, 6, 8)
+
+// Think of it like this
+nestedNumbers.map((x => x.map(_ * 2)).flatten
+// res1: List[Int] = List(2, 4, 6, 8)
+
+//
+// Generalized functional combinators
+// Everything built in .map .flatMap .flatten etc
+// Can be written using "fold"
+
+def ourMap(numbers: List[Int], fn: Int => Int): List[Int] = {
+  numbers.foldRight(List[Int]()) { (x: Int, xs: List[Int]) => 
+    fn(x) :: xs
+}
+
+ourMap(numbers, timesTwo(_))
+//res0: List[Int] = List(2, 4, 6, 8, 10, 12, 14, 16, 18, 20)
+
+// Map
+// All functional combinators shown work on Maps, too.
+// Maps can be thought of as a list of pairs so the functions 
+// your write work on a pair of the keys and values in the Map
+
+val extends = Map("steve" -> 100, "bob" -> 101, "joe" -> 201)
+//extends: scala.collection.immutable.Map[String,Int] = Map((steve,100), (bob,101), (joe,201))
+
+// filtering out entry whose phone extension is lower than 200
+extensions.filter((namePhone: (String, Int)) => namePhone._2 < 200)
+//res0: scala.collection.immutable.Map[String,Int] = Map((steve,100), (bob,101))
+
+// We can use pattern matching to extect the key and value nicely
+scala> extensions.filter({case (name, extension) => extension < 200})
+//res0: scala.collection.immutable.Map[String,Int] = Map((steve,100), (bob,101))
