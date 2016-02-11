@@ -1,0 +1,333 @@
+22:03:32 WARN  [com.rarebooks.library.RareBooksApp(akka://rare-books-system)] - RareBooksApp running
+Enter commands [`q` = quit, `2c` = 2 customers, etc.]:
+22:03:32 DEBUG [akka://rare-books-system/user/rare-books/librarian] - started (com.rarebooks.library.Librarian@11e6b50c)
+22:03:32 DEBUG [akka://rare-books-system/user/rare-books] - started (com.rarebooks.library.RareBooks@63690841)
+22:03:32 DEBUG [akka://rare-books-system/user/rare-books] - now supervising Actor[akka://rare-books-system/user/rare-books/librarian#-332731536]
+22:03:52 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:03:52 INFO  [akka://rare-books-system/user/rare-books] - 0 requests processed today. Total requests processed = 0
+22:03:54 DEBUG [akka://rare-books-system/user/$b] - started (com.rarebooks.library.Customer@4efe31d1)
+22:03:54 DEBUG [akka://rare-books-system/user/$a] - started (com.rarebooks.library.Customer@1278b8db)
+22:03:57 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:03:59 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:01 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:04:03 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:05 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:04:07 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:09 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:04:11 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:13 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) not found! My tolerance is 3.
+22:04:13 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156251791)
+22:04:15 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:17 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:04:17 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 11
+22:04:17 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:04:19 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:22 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:04:24 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) found!
+22:04:26 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:28 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:04:30 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:32 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:04:34 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156272789)
+22:04:34 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) not found! My tolerance is 3.
+22:04:36 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156274810)
+22:04:36 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) not found! My tolerance is 3.
+22:04:38 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:40 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:04:42 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:04:42 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 22
+22:04:42 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:44 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156282889)
+22:04:44 INFO  [akka://rare-books-system/user/$b] - 3 Book(s) not found! My tolerance is 3.
+22:04:47 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:04:49 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:51 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:04:53 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:04:55 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:04:57 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:04:59 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:01 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156299848)
+22:05:01 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) not found! My tolerance is 3.
+22:05:03 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:05 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:05:07 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:05:07 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 33
+22:05:07 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:09 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156307928)
+22:05:09 INFO  [akka://rare-books-system/user/$a] - 3 Book(s) not found! My tolerance is 3.
+22:05:12 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:05:14 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:16 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:05:18 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156316809)
+22:05:18 INFO  [akka://rare-books-system/user/$b] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:05:20 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:05:20 INFO  [akka://rare-books-system/user/$b] - Credit received, will start requesting again!
+22:05:20 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$b#361077028]()
+22:05:22 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:05:24 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:26 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:05:28 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:30 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:05:32 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:05:32 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 44
+22:05:32 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:34 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:05:37 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:05:39 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:41 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156339828)
+22:05:41 INFO  [akka://rare-books-system/user/$a] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:05:43 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:43 INFO  [akka://rare-books-system/user/$a] - Credit received, will start requesting again!
+22:05:43 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$a#-263874527]()
+22:05:45 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156343869)
+22:05:45 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) not found! My tolerance is 3.
+22:05:47 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:05:49 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:05:51 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:05:53 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156351949)
+22:05:53 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) not found! My tolerance is 3.
+22:05:55 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:05:57 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:05:57 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 55
+22:05:58 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:06:00 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156358008)
+22:06:00 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) not found! My tolerance is 3.
+22:06:02 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:06:04 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:06:06 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:06:08 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:06:10 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156368908)
+22:06:10 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) not found! My tolerance is 3.
+22:06:12 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:06:14 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156372948)
+22:06:14 INFO  [akka://rare-books-system/user/$a] - 3 Book(s) not found! My tolerance is 3.
+22:06:16 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:06:19 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156376988)
+22:06:19 INFO  [akka://rare-books-system/user/$a] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:06:21 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:06:21 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$a#-263874527]()
+22:06:21 INFO  [akka://rare-books-system/user/$a] - Credit received, will start requesting again!
+22:06:22 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:06:22 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 66
+22:06:23 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) found!
+22:06:25 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156383049)
+22:06:25 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) not found! My tolerance is 3.
+22:06:27 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:06:29 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156387889)
+22:06:29 INFO  [akka://rare-books-system/user/$b] - 3 Book(s) not found! My tolerance is 3.
+22:06:31 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:06:33 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:06:35 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156393948)
+22:06:35 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) not found! My tolerance is 3.
+22:06:37 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156395969)
+22:06:37 INFO  [akka://rare-books-system/user/$b] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:06:40 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156397988)
+22:06:40 INFO  [akka://rare-books-system/user/$a] - 3 Book(s) not found! My tolerance is 3.
+22:06:40 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$b#361077028]()
+22:06:40 INFO  [akka://rare-books-system/user/$b] - Credit received, will start requesting again!
+22:06:42 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:06:44 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:06:46 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156404048)
+22:06:46 INFO  [akka://rare-books-system/user/$a] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:06:47 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:06:47 INFO  [akka://rare-books-system/user/rare-books] - 10 requests processed today. Total requests processed = 76
+22:06:48 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156406069)
+22:06:48 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) not found! My tolerance is 3.
+22:06:48 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$a#-263874527]()
+22:06:48 INFO  [akka://rare-books-system/user/$a] - Credit received, will start requesting again!
+22:06:52 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:06:54 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:06:56 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:06:58 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:01 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:07:03 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:05 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:07:07 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:09 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:07:11 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:12 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:07:12 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 87
+22:07:13 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156431109)
+22:07:13 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) not found! My tolerance is 3.
+22:07:15 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156433129)
+22:07:15 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) not found! My tolerance is 3.
+22:07:17 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:07:19 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156437969)
+22:07:19 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) not found! My tolerance is 3.
+22:07:22 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:24 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:07:26 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156444028)
+22:07:26 INFO  [akka://rare-books-system/user/$b] - 3 Book(s) not found! My tolerance is 3.
+22:07:28 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:07:30 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:32 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:07:34 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:36 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156454128)
+22:07:36 INFO  [akka://rare-books-system/user/$a] - 3 Book(s) not found! My tolerance is 3.
+22:07:37 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:07:37 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 98
+22:07:38 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:40 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:07:43 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:07:45 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:47 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156465029)
+22:07:47 INFO  [akka://rare-books-system/user/$a] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:07:49 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:49 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$a#-263874527]()
+22:07:49 INFO  [akka://rare-books-system/user/$a] - Credit received, will start requesting again!
+22:07:51 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:07:53 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156471088)
+22:07:53 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) not found! My tolerance is 3.
+22:07:55 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156473108)
+22:07:55 INFO  [akka://rare-books-system/user/$b] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:07:57 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156475129)
+22:07:57 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) not found! My tolerance is 3.
+22:07:57 INFO  [akka://rare-books-system/user/$b] - Credit received, will start requesting again!
+22:07:57 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$b#361077028]()
+22:07:59 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:08:01 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:03 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:08:03 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 109
+22:08:03 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:08:05 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156483208)
+22:08:05 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) not found! My tolerance is 3.
+22:08:08 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:08:10 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:08:12 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:14 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:08:16 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:18 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:08:20 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:22 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:08:24 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156502188)
+22:08:24 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) not found! My tolerance is 3.
+22:08:26 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156504209)
+22:08:26 INFO  [akka://rare-books-system/user/$a] - 3 Book(s) not found! My tolerance is 3.
+22:08:28 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:08:28 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 120
+22:08:28 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:30 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:08:33 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:08:35 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:37 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:08:39 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:41 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:08:43 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:45 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:08:47 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:49 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156527229)
+22:08:49 INFO  [akka://rare-books-system/user/$a] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:08:51 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156529248)
+22:08:51 INFO  [akka://rare-books-system/user/$b] - 3 Book(s) not found! My tolerance is 3.
+22:08:51 INFO  [akka://rare-books-system/user/$a] - Credit received, will start requesting again!
+22:08:51 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$a#-263874527]()
+22:08:53 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:08:53 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 131
+22:08:53 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:08:55 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:08:58 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:09:00 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156538129)
+22:09:00 INFO  [akka://rare-books-system/user/$b] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:09:02 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156540149)
+22:09:02 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) not found! My tolerance is 3.
+22:09:02 INFO  [akka://rare-books-system/user/$b] - Credit received, will start requesting again!
+22:09:02 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$b#361077028]()
+22:09:04 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:09:06 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:09:08 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:09:10 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:09:12 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:09:14 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156552269)
+22:09:14 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) not found! My tolerance is 3.
+22:09:16 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156554288)
+22:09:16 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) not found! My tolerance is 3.
+22:09:18 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:09:18 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 142
+22:09:18 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:09:20 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:09:23 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:09:25 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:09:27 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156565188)
+22:09:27 INFO  [akka://rare-books-system/user/$a] - 3 Book(s) not found! My tolerance is 3.
+22:09:29 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156567208)
+22:09:29 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) not found! My tolerance is 3.
+22:09:31 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) found!
+22:09:33 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) found!
+22:09:35 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156573268)
+22:09:35 INFO  [akka://rare-books-system/user/$a] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:09:37 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) found!
+22:09:37 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$a#-263874527]()
+22:09:37 INFO  [akka://rare-books-system/user/$a] - Credit received, will start requesting again!
+22:09:39 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) found!
+22:09:41 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:09:43 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:09:43 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 153
+22:09:43 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:09:45 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:09:48 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:09:50 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156588209)
+22:09:50 INFO  [akka://rare-books-system/user/$b] - 3 Book(s) not found! My tolerance is 3.
+22:09:52 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:09:54 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156592248)
+22:09:54 INFO  [akka://rare-books-system/user/$b] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:09:56 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156594268)
+22:09:56 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) not found! My tolerance is 3.
+22:09:56 INFO  [akka://rare-books-system/user/$b] - Credit received, will start requesting again!
+22:09:56 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$b#361077028]()
+22:09:58 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:00 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:02 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:04 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:06 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:08 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:10:08 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 164
+22:10:08 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:10 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:13 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:10:15 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:17 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156615268)
+22:10:17 INFO  [akka://rare-books-system/user/$a] - 2 Book(s) not found! My tolerance is 3.
+22:10:19 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:21 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:23 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:25 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156623348)
+22:10:25 INFO  [akka://rare-books-system/user/$a] - 3 Book(s) not found! My tolerance is 3.
+22:10:27 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:29 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:31 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:33 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:10:33 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 175
+22:10:33 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156631428)
+22:10:33 INFO  [akka://rare-books-system/user/$a] - 4 Book(s) not found! Reached my tolerance of 3. Sent complaint!
+22:10:35 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:35 INFO  [akka://rare-books-system/user/$a] - Credit received, will start requesting again!
+22:10:35 INFO  [akka://rare-books-system/user/rare-books/librarian] - Credit issued to customer Actor[akka://rare-books-system/user/$a#-263874527]()
+22:10:38 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:10:40 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:42 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:44 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:46 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156644349)
+22:10:46 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) not found! My tolerance is 3.
+22:10:48 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156646369)
+22:10:48 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) not found! My tolerance is 3.
+22:10:50 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:10:52 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:54 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) found!
+22:10:56 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:10:58 INFO  [akka://rare-books-system/user/rare-books] - Closing down for the day
+22:10:58 INFO  [akka://rare-books-system/user/rare-books] - 11 requests processed today. Total requests processed = 186
+22:10:58 INFO  [akka://rare-books-system/user/rare-books/librarian] - BookNotFound(Book(s) not found based on Set(Unknown),1455156656468)
+22:10:58 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) not found! My tolerance is 3.
+22:11:00 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:11:03 INFO  [akka://rare-books-system/user/rare-books] - Time to open up!
+22:11:05 INFO  [akka://rare-books-system/user/$b] - 2 Book(s) found!
+22:11:07 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:11:09 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:11:11 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:11:13 INFO  [akka://rare-books-system/user/$b] - 1 Book(s) found!
+22:11:15 INFO  [akka://rare-books-system/user/$a] - 1 Book(s) found!
+22:11:16 DEBUG [akka://rare-books-system/user/$a] - stopped
+22:11:16 DEBUG [akka://rare-books-system/user/$b] - stopped
+22:11:16 DEBUG [akka://rare-books-system/user/rare-books] - stopping
+22:11:16 DEBUG [akka://rare-books-system/user/rare-books/librarian] - stopped
+22:11:16 DEBUG [akka://rare-books-system/user/rare-books] - stopped
