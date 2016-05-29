@@ -141,6 +141,16 @@ class FunSetSuite extends FunSuite {
     }
   }
 
+
+  test("filter") {
+    new TestSets {
+      val s12 = union(s1, s2)
+      val s123 = union(s12, s3)
+      assert(contains(filter(s123, x => x % 2 == 0), 2), "filter %2")
+      assert(!contains(filter(s123, x => x % 3 == 0), 1), "filter %3")
+    }
+  }
+
   test("filter contains only elements that comply with the given function (all even)") {
     new TestSets {
       val z = union(s1, s3)
@@ -186,9 +196,14 @@ class FunSetSuite extends FunSuite {
       val res3 = forall(set3, (x) => x % 2 == 0)
       println(FunSets.toString(set3) + ": "+res3)
       assert(res3 == false)
+
+      val filteredSet = filter(set3, (x) => x > 10)
+      println("filteredSet: "+FunSets.toString(filteredSet))
+      assert(!forall(filteredSet, (x) => x > 1), "Does not contain any value")
+      assert(!forall(filteredSet, (x) => x > 2), "Does not contain any value")
     }
   }
-
+  //Exists
   test("Checks if at least one element exists that complies with the given function (all even)") {
     new TestSets {
       val z = union(s1, s3)
