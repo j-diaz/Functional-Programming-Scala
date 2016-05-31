@@ -7,8 +7,6 @@
 [0m[[0minfo[0m] [0m[32m- diff contains all elements that are set a but not in set b[0m[0m
 [0m[[0minfo[0m] [0m[32m- filter[0m[0m
 [0m[[0minfo[0m] [0m[32m- filter contains only elements that comply with the given function (all even)[0m[0m
-[0m[[0minfo[0m] [0m[31m- forAll verifies elements in a set conform with the given function *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  FunSets.forall($anon.this.filteredSet, ((x: Int) => x.>(1))) was true Does not contain any value (FunSetSuite.scala:202)[0m[0m
-[0m[[0minfo[0m] [0m[31m- Checks if at least one element exists that complies with the given function (all even) *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  $anon.this.res2 was true At least one is divisible by 5 (FunSetSuite.scala:220)[0m[0m
+[0m[[0minfo[0m] [0m[32m- forAll verifies elements in a set conform with the given function[0m[0m
+[0m[[0minfo[0m] [0m[32m- Checks if at least one element exists that complies with the given function (all even)[0m[0m
 [0m[[0minfo[0m] [0m[32m- Map transform a set with given function (squared)[0m[0m

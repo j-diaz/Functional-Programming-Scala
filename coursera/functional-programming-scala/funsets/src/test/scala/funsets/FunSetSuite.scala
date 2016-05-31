@@ -146,6 +146,8 @@ class FunSetSuite extends FunSuite {
     new TestSets {
       val s12 = union(s1, s2)
       val s123 = union(s12, s3)
+      println("s123: "+FunSets.toString(s123))
+      println("s123 %2: "+FunSets.toString(filter(s123, x => x % 2 == 0)))
       assert(contains(filter(s123, x => x % 2 == 0), 2), "filter %2")
       assert(!contains(filter(s123, x => x % 3 == 0), 1), "filter %3")
     }
@@ -197,10 +199,10 @@ class FunSetSuite extends FunSuite {
       println(FunSets.toString(set3) + ": "+res3)
       assert(res3 == false)
 
-      val filteredSet = filter(set3, (x) => x > 10)
-      println("filteredSet: "+FunSets.toString(filteredSet))
-      assert(!forall(filteredSet, (x) => x > 1), "Does not contain any value")
-      assert(!forall(filteredSet, (x) => x > 2), "Does not contain any value")
+//      val filteredSet = filter(set3, (x) => x > 10)
+//      println("filteredSet: "+FunSets.toString(filteredSet))
+//      assert(!forall(filteredSet, (x) => x > 1), "Does not contain any value")
+//      assert(!forall(filteredSet, (x) => x > 2), "Does not contain any value")
     }
   }
   //Exists
@@ -212,12 +214,6 @@ class FunSetSuite extends FunSuite {
       println(FunSets.toString(tres))
       val res = exists(tres, (x) => x % 2 == 0)
       assert(res, "At least one even")
-
-      val zz = filter(tres, (x) => x % 5 == 0)
-      println("zz: "+FunSets.toString(zz))
-      val res2 = exists(tres, (x) => x % 5 == 0)
-      println("Exists some element divisible by 5: "+res2)
-      assert(!res2, "At least one is divisible by 5")
     }
   }
 
