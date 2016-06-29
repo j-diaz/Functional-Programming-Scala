@@ -34,7 +34,22 @@ object Anagrams {
    *
    *  Note: you must use `groupBy` to implement this method!
    */
-  def wordOccurrences(w: Word): Occurrences = ???
+  def wordOccurrences(w: Word): Occurrences = {
+//    def wordOccHelper(w: Word, occ :List[(Char,Int)]): List[(Char,Int)] = {
+//      if(w.isEmpty) occ
+//      else {
+//        val newOcc =  (w.charAt(0), 1) :: occ
+//        wordOccHelper(w.substring(1, w.length), newOcc)
+//      }
+//    }
+//    wordOccHelper(w, List()).reverse
+    val chars = w.toList
+    val pairList = chars map (x => x.toLower)
+    val z = pairList groupBy ((element) => element)
+    //val o = z foreach ((x) => )
+    println(z)
+    List(('a',1))
+  }
 
   /** Converts a sentence into its character occurrence list. */
   def sentenceOccurrences(s: Sentence): Occurrences = ???
