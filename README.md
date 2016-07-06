@@ -16,9 +16,17 @@ foldright -
 foldleft -
 ```
 
-```map```
-```flatMap```
-```filter```
+```
+map
+```
+
+```
+flatMap
+```
+
+```
+filter
+```
 
 ```
 for comprehensions equivalences:
